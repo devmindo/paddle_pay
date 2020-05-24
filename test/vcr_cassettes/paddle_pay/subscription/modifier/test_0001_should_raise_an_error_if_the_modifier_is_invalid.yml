@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/subscription/modifiers/create
+    body:
+      encoding: UTF-8
+      string: modifier_amount=1.00&modifier_description=Test&subscription_id=1234567&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 23 May 2020 09:12:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d97d8972a64fb1579bb2298f287615fa01590225139; expires=Mon, 22-Jun-20
+        09:12:19 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6IjdCakNcL3BOTW9ScXRKMHU1OXpMbXhvdmlZM2Vwb0lNUVlvWVZhU0ZlNUJjPSIsInZhbHVlIjoiREMyXC8xaHVQUHI3U3hVMVd1OEdLVlJaTVBKeU1MRVZ4QnBhZjFVNGFPSnNLVUdCT1dmT3dBTm5lXC9DQ0piT0R2d1pIdEpncDU2XC95TjRTcGsyR1dOYmc9PSIsIm1hYyI6IjQzYzg2Njg0MzNlNGY5NzRiODQxOGEyOGYwZDc2NDg1MWY4YWNlNDc0NjQ2YWY5YWM0YTc2MWQ1YzMyNWQ0MzYifQ%3D%3D;
+        expires=Sat, 23-May-2020 11:12:20 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 597da794abe7fa48-AMS
+      Cf-Request-Id:
+      - 02e26710ec0000fa48e234a200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"error":{"code":119,"message":"Unable to find requested
+        subscription"}}'
+    http_version: null
+  recorded_at: Sat, 23 May 2020 09:12:20 GMT
+recorded_with: VCR 5.1.0

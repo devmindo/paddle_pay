@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/subscription/3484448/charge
+    body:
+      encoding: UTF-8
+      string: amount=0.00&charge_name=Test&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 23 May 2020 08:58:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d23c8105f2a125babb7296808c7b14a801590224312; expires=Mon, 22-Jun-20
+        08:58:32 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6IjIwanBsU2V4TE5zQndXdVVcL3RWbHFCZG43ZVwvVGloZCtPQmZvSEpVT3poWT0iLCJ2YWx1ZSI6IkZyVXFGSFwvVG1oY3lOQlNJanUwXC9PZFBcLzlzK3lvVTJcL2tCYmJ3dzRXOUJiNEVlMmRDbkVNam13WFVTeGJEU2NzTlZoS0o4U3U5TWk1VGcza3R4ZmJHQT09IiwibWFjIjoiMzdjOGM0NjNhMGE0OTcwZGYyM2ZlM2Y3ODdlMmM5MjE1MTViNjk5N2I4NDdkZGNmZWU2NTYwM2E4NmEwZDI1YyJ9;
+        expires=Sat, 23-May-2020 10:58:32 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 597d93609ba472b1-AMS
+      Cf-Request-Id:
+      - 02e25a7063000072b10aa71200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"response":{"invoice_id":1,"subscription_id":1,"amount":"10.00",
+          "currency":"USD","payment_date":"2018-09-21","receipt_url":"https://my.paddle.com/receipt/1-1/3-chre3a53a2724c6-42781cb91a"}}'
+    http_version: null
+  recorded_at: Sat, 23 May 2020 08:58:32 GMT
+recorded_with: VCR 5.1.0

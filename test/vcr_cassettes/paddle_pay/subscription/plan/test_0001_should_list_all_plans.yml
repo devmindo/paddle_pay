@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/subscription/plans
+    body:
+      encoding: UTF-8
+      string: vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 May 2020 12:18:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d26c128eec637c3a44e03cc7b009abe581590149932; expires=Sun, 21-Jun-20
+        12:18:52 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6IkVmZzhiUjBNcERqWGd5RitYMnJpd005RnlBZ0N0VlpHSjdUdWRRcTJvRHc9IiwidmFsdWUiOiI3cFVSWWFxV2pXMGVxUzJqOCtTUklIdExxSTEybHVxZEJqUjJNTll6THhlTjNQeWl3aExsU3FpZFZmbm01XC9vamoyczBMTzVQaWZ6TktpUG1qTzZXVHc9PSIsIm1hYyI6ImRmMzUwYmQ4M2Q1NjE4ZWVlMjg4MzMyYWRlNjM1OTA5OTg2ZjhmMGNjNDZlOGQ1ZDdkM2I3YzQzZmYwM2IwMWYifQ%3D%3D;
+        expires=Fri, 22-May-2020 14:18:52 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 59767b760da4732f-AMS
+      Cf-Request-Id:
+      - 02ddeb7dc50000732fcdbee200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"response":[{"id":593673,"name":"Test","billing_type":"month","billing_period":1,"initial_price":{"USD":"0.00","GBP":"0.00","EUR":"0.00","RUB":"0.00","AUD":"0.00","BRL":"0.00","CAD":"0.00","CHF":"0.00","CNY":"0.00","PLN":"0.00","SEK":"0.00","ZAR":"0.00","CZK":"0.00","HUF":"0.00","DKK":"0.00","NZD":"0.00","SGD":"0.00","HKD":"0.00","INR":"0.00","JPY":"0","KRW":"0","MXN":"0.00","ARS":"0.00","TWD":"0.00","NOK":"0.00","THB":"0.00"},"recurring_price":{"USD":"27.82","GBP":"22.84","EUR":"25.00","RUB":"1987.55","AUD":"42.58","BRL":"155.26","CAD":"38.96","CHF":"27.02","CNY":"198.46","PLN":"115.28","SEK":"268.69","ZAR":"490.28","CZK":"693.92","HUF":"8909.76","DKK":"190.18","NZD":"45.56","SGD":"39.58","HKD":"215.74","INR":"2110.25","JPY":"2991","KRW":"34527","MXN":"638.66","ARS":"1892.66","TWD":"835.08","NOK":"278.17","THB":"887.15"},"trial_days":0},{"id":593687,"name":"Free","billing_type":"month","billing_period":1,"initial_price":{"USD":"0.00","GBP":"0.00","EUR":"0.00","RUB":"0.00","AUD":"0.00","BRL":"0.00","CAD":"0.00","CHF":"0.00","CNY":"0.00","PLN":"0.00","SEK":"0.00","ZAR":"0.00","CZK":"0.00","HUF":"0.00","DKK":"0.00","NZD":"0.00","SGD":"0.00","HKD":"0.00","INR":"0.00","JPY":"0","KRW":"0","MXN":"0.00","ARS":"0.00","TWD":"0.00","NOK":"0.00","THB":"0.00"},"recurring_price":{"USD":"0.00","GBP":"0.00","EUR":"0.00","RUB":"0.00","AUD":"0.00","BRL":"0.00","CAD":"0.00","CHF":"0.00","CNY":"0.00","PLN":"0.00","SEK":"0.00","ZAR":"0.00","CZK":"0.00","HUF":"0.00","DKK":"0.00","NZD":"0.00","SGD":"0.00","HKD":"0.00","INR":"0.00","JPY":"0","KRW":"0","MXN":"0.00","ARS":"0.00","TWD":"0.00","NOK":"0.00","THB":"0.00"},"trial_days":0},{"id":593930,"name":"API","billing_type":"month","billing_period":1,"initial_price":{"USD":"0.00"},"recurring_price":{"USD":"5.00"},"trial_days":0}]}'
+    http_version: null
+  recorded_at: Fri, 22 May 2020 12:18:52 GMT
+recorded_with: VCR 5.1.0

@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/subscription/plans_create
+    body:
+      encoding: UTF-8
+      string: main_currency_code=USD&plan_length=1&plan_name=Test&plan_trial_days=30&plan_type=month&recurring_price_usd=5.00&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 May 2020 16:08:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d905f33e902fda4917c3808d6020449ce1590163732; expires=Sun, 21-Jun-20
+        16:08:52 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - _calq_vendor_d=eyJIYXNUcmFja2VkIjpmYWxzZSwiSXNBbm9uIjp0cnVlLCJhY3RvciI6ImEzYzM2ZDBlYTMzNWNlNmEwOTNjNThiMTc3MzE4ZWYxIn0%3D;
+        expires=Fri, 05-Jun-2020 11:28:59 GMT; Max-Age=1192807; path=/; domain=.paddle.com;SameSite=none;Secure
+      - paddle_session_vendor=eyJpdiI6Imd0ZFowWDFvTXJHUm0yRUFPRmd2WjZNbGlTV1hvSDFxTU1JTmVITm9Ycjg9IiwidmFsdWUiOiJGNHRUbUxvenRqRXk4MU5sV1dLTnFCbDZ1c2RXMVJXbDlXZlp6MnRsSjA1MTRuVzhtR2VUYjBJQVRFSnBOMmhcL1doWDJiQitvRGJcL3hGdWFDTUVvOE53PT0iLCJtYWMiOiJkOGQ1OGRkZjM2NWM5MDk4NzY5ZWUyMGY0NjNjZGM4ZGM0MDVmMzE2OTgwNTZjZTYxOWEzMzNjOTNkZmUzMmYwIn0%3D;
+        expires=Fri, 22-May-2020 18:08:52 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5977cc602aeafaa8-AMS
+      Cf-Request-Id:
+      - 02debe101b0000faa81c3f7200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"response":{"product_id":594469}}'
+    http_version: null
+  recorded_at: Fri, 22 May 2020 16:08:52 GMT
+recorded_with: VCR 5.1.0

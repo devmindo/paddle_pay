@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/subscription/modifiers/create
+    body:
+      encoding: UTF-8
+      string: modifier_amount=1.00&modifier_description=Test&subscription_id=3484448&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 23 May 2020 09:12:21 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc75b910a061d299a7effdf7a1ca20ce11590225141; expires=Mon, 22-Jun-20
+        09:12:21 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6InB0b0RrTnZUSVNoeThSVW9MaDdqY1Z3a0pkUEljZk5icVk2TTArSkVEZEk9IiwidmFsdWUiOiJQVzZCOVU4UERSalZtbDBTeCtqdlRydEQrc3prTTZBdXNCNHlmR2VtRkFHYm8yUHZzZE1XK0NjQitrbmREbGd6QTh3bVFFUjNQVFNDZlMxOTZ2aU0zdz09IiwibWFjIjoiYWNmMWY0MjQwNTRkMjk5ZTJmNjQzNDgxMzdmYzE2ZjZmNmJhZGJkOGNjMGIxOTg0Y2Y1OWFmNWUxOTVkNjQ3MSJ9;
+        expires=Sat, 23-May-2020 11:12:21 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 597da79b48ed0c79-AMS
+      Cf-Request-Id:
+      - 02e267150c00000c7933863200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"response":{"subscription_id":3484448,"modifier_id":143433}}'
+    http_version: null
+  recorded_at: Sat, 23 May 2020 09:12:21 GMT
+recorded_with: VCR 5.1.0

@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/product/delete_coupon
+    body:
+      encoding: UTF-8
+      string: coupon_code=NOVALIDCOUPON&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 24 May 2020 07:41:10 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d6b3a650626206a86595213a63230c13b1590306070; expires=Tue, 23-Jun-20
+        07:41:10 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6Im9rWVpndHdHVWc1dVJIUk1UWFZRVmpTNFFBTEcxdHlLVUdTQ2JNVFwvbVY0PSIsInZhbHVlIjoidkwwejdzOVBuNG9zdTR3M05CYU05NHZ4aW9TRW9PaXFqVFhSNkJuc2lEdXIybWV6UmxVbWprbnVPZFkyd1RrcjhDOVhKWGQ2aHJQTElmcktaT1dPdlE9PSIsIm1hYyI6ImMwZjA4MDNiYjBjMzZhZmFhOGRlZGVhY2JiMjM4YTUzN2IyYWUzNTIyZTAxNDBmOTkzNGNhYWEyMGY2NWVmYWQifQ%3D%3D;
+        expires=Sun, 24-May-2020 09:41:10 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 59855f6aab640956-AMS
+      Cf-Request-Id:
+      - 02e739f6ac000009563381a200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"error":{"code":116,"message":"One or more required
+        arguments are missing"}}'
+    http_version: null
+  recorded_at: Sun, 24 May 2020 07:41:10 GMT
+recorded_with: VCR 5.1.0

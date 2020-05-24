@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/user/17368056/transactions
+    body:
+      encoding: UTF-8
+      string: vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 23 May 2020 10:55:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d7a3d9389d7ff4d7ca4b28e8b0e6766dc1590231315; expires=Mon, 22-Jun-20
+        10:55:15 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6IjJjOCtoemRJcVVVNE9mNVRDNnVPTnJwTVAxWUd3bDdBcStPTEo1XC9VNktFPSIsInZhbHVlIjoiU2I2OWg2QnoreDdXVnNSVXN5WFM3d29KOU1XMXVQQ3c0NzlXMm1IZlUyeWJCT2F3NUI4SHo1Sml4MHdmN0NcLzNpc20zZldNa1ZVRzlFZ2RtVnJUWEZBPT0iLCJtYWMiOiIwM2VjYjY5NTUxMWRiOWM5MDcyYTc0MDg1ZDA5NjEyZGE1OGQ2ZTVjY2VkYTE1ZDc2YjQ1NGViYmRkNzlmNTgyIn0%3D;
+        expires=Sat, 23-May-2020 12:55:15 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 597e3e588d08d8f9-AMS
+      Cf-Request-Id:
+      - 02e2c54b560000d8f9858ea200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"error":{"code":107,"message":"You don''t have permission
+        to access this resource"}}'
+    http_version: null
+  recorded_at: Sat, 23 May 2020 10:55:15 GMT
+recorded_with: VCR 5.1.0

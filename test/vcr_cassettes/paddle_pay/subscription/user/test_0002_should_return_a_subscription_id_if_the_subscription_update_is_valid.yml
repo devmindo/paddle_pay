@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/subscription/users_update
+    body:
+      encoding: UTF-8
+      string: currency=USD&quantity=1&recurring_price=10.00&subscription_id=3479984&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 May 2020 17:06:00 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d30f5f92caff4a7af6e7c6e8bb5351bd21590167160; expires=Sun, 21-Jun-20
+        17:06:00 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6IndXR1o5YlE0RXBBUHo0Q3labG5wQ1p1Y2lLWVZmQ2VMMUFhOWJPVm83aWs9IiwidmFsdWUiOiI1RWZmaUVPY1wvV3pXMWJsNjJUSEE3K0RtTkhOOUltRm9DSXVxdDZueW1pMXlIZnRVTlh1V05SQXYrT1N5d3dnNWpoUEQ5cjFsVmhtN3F1cjcyOWVBa0E9PSIsIm1hYyI6ImEzZjUxNGNhZDAwMzgxNTYyNGJlOWNiZWY3YmU3MDFkODQ3NjU0NmYwYWIwZjQ5NzhkYzRhZmY0YmE4YzY1YTEifQ%3D%3D;
+        expires=Fri, 22-May-2020 19:06:00 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5978200e8a26bdf5-AMS
+      Cf-Request-Id:
+      - 02def25d190000bdf5d78d7200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"response":{"subscription_id":3479984,"user_id":17368056,"plan_id":594469,"next_payment":{"amount":17.85,"currency":"USD","date":"2020-06-22"}}}'
+    http_version: null
+  recorded_at: Fri, 22 May 2020 17:06:00 GMT
+recorded_with: VCR 5.1.0

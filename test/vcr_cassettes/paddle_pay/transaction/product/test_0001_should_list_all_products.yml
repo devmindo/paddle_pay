@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/product/594469/transactions
+    body:
+      encoding: UTF-8
+      string: vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 23 May 2020 10:43:39 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d59e73a2e61f68df7996c2ccd93870b141590230618; expires=Mon, 22-Jun-20
+        10:43:38 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6IlwvdGN2RHhueXd4NW1HRFRFaEIzd1dzZ2phRit2Y3NNSG1MMVJ3blV4VUVnPSIsInZhbHVlIjoiZkVoOVppYVFPdmdiYjNzZmQ2QU9UU0ZnZmZ5QVFXVmRzWDFXUFVNVG1hUnBzQmFqMFc2ZnVROEM3NmtqWFBDNWtQZjNDV2xuaStCdDU5dDNNOE13Z0E9PSIsIm1hYyI6IjdiZjNhNDM3ODExZTg3YWRhZjVkNTFmOGJhN2MyNGJmMjBhYjJlZTQyMmU2ZjYxOWNkMDZhMTU4YWUwMTg1NDkifQ%3D%3D;
+        expires=Sat, 23-May-2020 12:43:39 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 597e2d57be3bc795-AMS
+      Cf-Request-Id:
+      - 02e2baaad70000c7954519b200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"response":[{"order_id":"14854225-10710435","checkout_id":"57064784-chrec5910826421-58f0e94797","amount":"0.00","currency":"USD","status":"completed","created_at":"2020-05-23
+        08:47:55","passthrough":null,"product_id":594469,"is_subscription":true,"is_one_off":false,"subscription":{"subscription_id":3484448,"status":"active"},"user":{"user_id":17368056,"email":"test@example.com","marketing_consent":false},"receipt_url":"https:\/\/my.paddle.com\/receipt\/14854225-10710435\/57064784-chrec5910826421-58f0e93787"},{"order_id":"14841377-10693223","checkout_id":"57013079-chre0d8968b883c-94b82a41db","amount":"0.00","currency":"USD","status":"completed","created_at":"2020-05-22
+        16:21:39","passthrough":null,"product_id":594469,"is_subscription":true,"is_one_off":false,"subscription":{"subscription_id":3479984,"status":"deleted"},"user":{"user_id":17368056,"email":"test@example.com","marketing_consent":false},"receipt_url":"https:\/\/my.paddle.com\/receipt\/14841377-10693223\/57013079-chre0d8958b883c-94b82b41db"}]}'
+    http_version: null
+  recorded_at: Sat, 23 May 2020 10:43:39 GMT
+recorded_with: VCR 5.1.0

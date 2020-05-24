@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/order/14854225-10710435/transactions
+    body:
+      encoding: UTF-8
+      string: vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 23 May 2020 09:47:35 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d1be66dc3bf97583580423fffd8a2d1aa1590227255; expires=Mon, 22-Jun-20
+        09:47:35 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6IiszZlwvaU5MS2k1N243OWczVU5sNmtZaVBDVVdvbVwvWnNjb1M1RjBaTFRNYz0iLCJ2YWx1ZSI6IjdiXC95bk9CTXl5XC94MTNiR3QxRkdtV2VtSEJJVHhqaStRZlltS2dsVkRWM2RacDVrWXVHcGNCS0JcL2NRVVJOT3pScnJOMmJwc0NKYmlNSlwvV3FtMTVwZz09IiwibWFjIjoiNzc1YWFjM2YwM2M0NjE2NDI3Y2FlNTZmOWIzNDcxNDI4ZDJlNzlhYjQ1YjM2YTcxZjg2Nzg4NDIyN2QxYTUwYyJ9;
+        expires=Sat, 23-May-2020 11:47:35 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 597ddb385ac60bed-AMS
+      Cf-Request-Id:
+      - 02e287573600000bedb8059200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"response":[{"order_id":"14854225-10710435","checkout_id":"57064784-chrec5910826421-58f0e94797","amount":"0.00","currency":"USD","status":"completed","created_at":"2020-05-23
+        08:47:55","passthrough":null,"product_id":594469,"is_subscription":true,"is_one_off":false,"subscription":{"subscription_id":3484448,"status":"active"},"user":{"user_id":17368056,"email":"test@example.com","marketing_consent":false},"receipt_url":"https:\/\/my.paddle.com\/receipt\/14854225-10700435\/57064784-chrec5910d26421-58f0e94697"}]}'
+    http_version: null
+  recorded_at: Sat, 23 May 2020 09:47:35 GMT
+recorded_with: VCR 5.1.0

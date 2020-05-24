@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/product/generate_pay_link
+    body:
+      encoding: UTF-8
+      string: product_id=594512&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 24 May 2020 08:11:03 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d613051f16189ecaed67f921e0b93be0e1590307862; expires=Tue, 23-Jun-20
+        08:11:02 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6ImpuclA3WVZ5TGVoVDJla1lFYnFyc3ZrNVREUFR2OGJvUFNpdzZDWXNBSnM9IiwidmFsdWUiOiJ2XC9yclp4N3RLNU1SM0Y4YldYYUJnUWVGdVBnWkRCMzhxMjQ1UUExSE9hajJZbGhBSGZWdDhZR21DeTJoVVB6R0x4ckczQTNMaDNjOWZZdVZ1ZHhIZHc9PSIsIm1hYyI6ImVjZDE3Y2ExNWQ3MDc5YTJmODc0MzRjOTA5ODg1OWU2MDk5ZDg3MWIyZDM5OWY4OTJjNDEzMTRlZDJhMTJjY2YifQ%3D%3D;
+        expires=Sun, 24-May-2020 10:11:03 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 59858b2f6821fa70-AMS
+      Cf-Request-Id:
+      - 02e755519c0000fa7006b51200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"response":{"url":"https:\/\/checkout.paddle.com\/checkout\/custom\/eyJ0IjoiVGVzdCIsImkiOiJodHRwczpcL1wvc3RhdGljLnBhZGRsZS5jb21cL2Fzc2V0c1wvaW1hZ2VzXC9jaGVja291dFwvZGVmYXVsdF9wcm9kdWN0X2ljb24ucG5nIiwiciI6bnVsbCwiY20iOiIiLCJyZSI6MSwicCI6NTk0NTEyLCJjYyI6W10sInkiOiIiLCJxIjoxLCJkIjoxLCJhIjpbXSwidiI6IjExNDExNiIsImR3IjpmYWxzZSwicyI6IjYzYTE0ZjBlYjc4MzJhYmNjNWJjZWQ3YWQ1NjJjYmRjNTEzZGZjN2I3OTUxODU5NmIwZmYzZDgzYjcwMjY1MjQyMGMzYTUxNzFjYjE4YTlmMmUwMWQwNTUwYzliMzg3ZmRiYWU2MWE4MWJmNTc0MTMzY2IxOWJmMzBmNDNiYmEwIn0="}}'
+    http_version: null
+  recorded_at: Sun, 24 May 2020 08:11:03 GMT
+recorded_with: VCR 5.1.0

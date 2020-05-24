@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/product/generate_license
+    body:
+      encoding: UTF-8
+      string: allowed_uses=10&product_id=594512&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 24 May 2020 08:04:16 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d57f65beca4a7923f9a2922cf5af0cbcd1590307456; expires=Tue, 23-Jun-20
+        08:04:16 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6InJyQnErTnNYZVkyKzZkaGE3QVJjTXJVSU04UWI5VnRQblBtVGhhQ1FiZkk9IiwidmFsdWUiOiJ6cGppZ0ZYWTN5NXI1anZyK2RBdDJhM2VlZ0ZcL0JuMTZEeU1ESGNPTHlvZzlxb2JpQmMzeHhxTGhrMzlRb3lsT3NwVzRiZDFxYk0zVDBrN1FoNHdcLzBnPT0iLCJtYWMiOiIwMzY5Y2ZmNWE3MDZkNzcyMGNhZGY4ODZlNGU4MjJmMDU1ZmM0MWZlYzgyZjcwYWI2NjM0OGZhZGQ5YmJiMGE3In0%3D;
+        expires=Sun, 24-May-2020 10:04:16 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 598581443f00faa0-AMS
+      Cf-Request-Id:
+      - 02e74f1ea60000faa02f258200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"error":{"code":108,"message":"Unable to find requested
+        product"}}'
+    http_version: null
+  recorded_at: Sun, 24 May 2020 08:04:16 GMT
+recorded_with: VCR 5.1.0

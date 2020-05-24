@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/product/get_products
+    body:
+      encoding: UTF-8
+      string: vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 24 May 2020 08:13:43 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d994e85da48851c81e26654b8bdd48d2d1590308023; expires=Tue, 23-Jun-20
+        08:13:43 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6InBJMFErQkVWM3U0OUw5UnhiUWpGbzNrM1VaZzVtWmxvM3lvenI3SWV2UTA9IiwidmFsdWUiOiJxbE9USm9zRCsyR2poVEZIaSt5ZnIxM2ZRWnNMVEN3OHMzYUlSMjc5TitadGF0YThJVjhRWFp6bzArMmorQUpcL0tGSGR0QWI1ckZ6d1I4bWRyaWd3cUE9PSIsIm1hYyI6ImEyODU3ZWNjMjU2YzhhZmQwNWQxZjgxZjhkM2E5ZmEzMWY0ZTU3NzJiZGE0MDZlNmRiZjYxNDgxMmM1YjBmODQifQ%3D%3D;
+        expires=Sun, 24-May-2020 10:13:43 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 59858f1cbe089cbd-AMS
+      Cf-Request-Id:
+      - 02e757c5ee00009cbd6a8a6200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"response":{"total":1,"count":1,"products":[{"id":594512,"name":"Test","description":"","base_price":null,"sale_price":null,"screenshots":[],"icon":"https:\/\/static.paddle.com\/assets\/images\/checkout\/default_product_icon.png"}]}}'
+    http_version: null
+  recorded_at: Sun, 24 May 2020 08:13:43 GMT
+recorded_with: VCR 5.1.0

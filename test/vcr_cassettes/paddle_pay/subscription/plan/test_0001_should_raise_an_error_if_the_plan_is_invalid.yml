@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/subscription/plans_create
+    body:
+      encoding: UTF-8
+      string: plan_length=1&plan_name=Test&plan_trial_days=30&plan_type=month&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 May 2020 16:06:14 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d18ace1acb974c6f9b395516c9a1c60181590163574; expires=Sun, 21-Jun-20
+        16:06:14 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6IjNBZkoya2ZYemVmMW5MOEJ4VUVmd3lySko5eUV3SXNhOThXNEV6ZmpGMWs9IiwidmFsdWUiOiJ1cThuSWE4dTZjeUZ3UEFUNjNCS1ROUU00ZGNuOFl1NURBb3k0Q0RNV0VyajNVYURGTk1YeStRWmMydDU5bUljTkZcL0Z4WVRJcGF4enlRSmJFYzdlYmc9PSIsIm1hYyI6IjUzM2YzOTViZDgzMmFkZDVhMjNjMzhhNmEyMTNiMmNmZWZhYTZkOWUxMzgyNWMzODc4ZWY1ZThhOTE5Y2UxYTAifQ%3D%3D;
+        expires=Fri, 22-May-2020 18:06:14 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5977c8821b1b0b4b-AMS
+      Cf-Request-Id:
+      - 02debba54c00000b4b6bb2f200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"error":{"code":125,"message":"Main currency price
+        was not provided"}}'
+    http_version: null
+  recorded_at: Fri, 22 May 2020 16:06:14 GMT
+recorded_with: VCR 5.1.0

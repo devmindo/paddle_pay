@@ -1,0 +1,51 @@
+PATH
+  remote: .
+  specs:
+    paddle_pay (0.0.1)
+      faraday (~> 1.0)
+      json (~> 2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    ansi (1.5.0)
+    builder (3.2.4)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    dotenv (2.7.5)
+    faraday (1.0.1)
+      multipart-post (>= 1.2, < 3)
+    hashdiff (1.0.1)
+    json (2.3.0)
+    minitest (5.14.1)
+    minitest-reporters (1.4.2)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
+    multipart-post (2.1.1)
+    public_suffix (4.0.5)
+    ruby-progressbar (1.10.1)
+    safe_yaml (1.0.5)
+    vcr (5.1.0)
+    webmock (3.8.3)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 2.0)
+  dotenv (~> 2.7)
+  minitest (~> 5.8)
+  minitest-reporters (~> 1.1)
+  paddle_pay!
+  vcr (~> 5.0)
+  webmock (~> 3.0)
+
+BUNDLED WITH
+   2.1.4

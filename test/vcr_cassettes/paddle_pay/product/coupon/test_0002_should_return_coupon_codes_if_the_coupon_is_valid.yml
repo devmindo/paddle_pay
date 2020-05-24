@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.1/product/create_coupon
+    body:
+      encoding: UTF-8
+      string: allowed_uses=10&coupon_type=checkout&discount_amount=100&discount_type=percentage&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 24 May 2020 07:41:08 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d88c52e5c4b063e3c380e23ca390230dd1590306068; expires=Tue, 23-Jun-20
+        07:41:08 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6IllOSmtKZlRnRkFwb01PaDZ1dGw4Ujd2YVwvUkloZ0NpU2E1N3J3U0pCOUEwPSIsInZhbHVlIjoic2ozZE9hbVhyYmNLMVd2UFROZmlZM1dWNEFXQVI3QkNtZjV0VDNwQyt2QTRCaVhoZnRPNWdUWWV2QlJleHVCTFBJMlVYQVlJVFl3WHZYXC9DTGhrUjBBPT0iLCJtYWMiOiJjYjA1OTA0OTlmYzFjNmU3YzI2NDFhOTFlYTkxZDkzOTUzZDZmNGJiZjE5NDc2ZTBjOTBiODQ4OWViODk3MDc2In0%3D;
+        expires=Sun, 24-May-2020 09:41:08 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 59855f5e89b9d8b1-AMS
+      Cf-Request-Id:
+      - 02e739ef180000d8b1ec883200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"response":{"coupon_codes":["55FB97E5"]}}'
+    http_version: null
+  recorded_at: Sun, 24 May 2020 07:41:08 GMT
+recorded_with: VCR 5.1.0

@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/subscription/preview_update
+    body:
+      encoding: UTF-8
+      string: subscription_id=3479984&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 May 2020 17:06:00 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=defdf1dcb1b0d2198b3866292792385591590167160; expires=Sun, 21-Jun-20
+        17:06:00 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6ImdUQTVWQzRGQW54Vyt6N21nR25yRmZDajVLQzlLYmpjZTlyM2RHS1FRalU9IiwidmFsdWUiOiJLeWpzbjR3OUpBREJBTFM1a0s5REh5SElxMmxxU0h6Sk5EWm1xREwrUzVlYzNJRUJ2bzg5elJNTXZra3pKRVZGbW01OVZkNEJjQzg3XC83ZDI3YUo3OGc9PSIsIm1hYyI6IjBmNjQ2YjAwMTE3M2Y4YzY2MjU0OWVkZDZlYTc5NDg5MTZhMTQyZGMyOWE3OWZmNTYyNTliYWM3NDc5ZjEyYWQifQ%3D%3D;
+        expires=Fri, 22-May-2020 19:06:00 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 59782011becf0b63-AMS
+      Cf-Request-Id:
+      - 02def25f0e00000b63999ac200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"error":{"code":116,"message":"One or more required
+        arguments are missing"}}'
+    http_version: null
+  recorded_at: Fri, 22 May 2020 17:06:00 GMT
+recorded_with: VCR 5.1.0

@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vendors.paddle.com/api/2.0/payment/refund
+    body:
+      encoding: UTF-8
+      string: order_id=1234567&vendor_auth_code=<VENDOR_AUTH_CODE>&vendor_id=<VENDOR_ID>
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 24 May 2020 16:00:59 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da04a1a969b2d71446340494129a959c01590336059; expires=Tue, 23-Jun-20
+        16:00:59 GMT; path=/; domain=.paddle.com; HttpOnly; SameSite=Lax
+      - paddle_session_vendor=eyJpdiI6Ikk0SWIxOXNWYUU5ZU9hVmdzdG5TblNhOUlUaVg1T3c1eThCbHQycGRyNmc9IiwidmFsdWUiOiIyZ1J1Nkg3amNDakdUYWMwQ1EwSUxNTklaWUNnb0ZUM1JpTStUK3oxR3Y4bE5RWk1IeTdLWVZXSjhFNUcybkZNd3ptNjljZTJaQXROQjJsT3YzUUtQQT09IiwibWFjIjoiNmYzMjNiYzQ2OTkzMjhlYzQ1NjRlOTk1ZGMwMWUxN2IxNzAzODM4OThjODNiNjVjYzFiYzM3YjUyNTRkOWE0ZiJ9;
+        expires=Sun, 24-May-2020 18:00:59 GMT; Max-Age=7200; path=/; domain=vendors.paddle.com;
+        secure; HttpOnly;SameSite=none;Secure
+      X-Powered-By:
+      - PHP/7.2.31
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - sameorigin
+      P3p:
+      - CP="CAO CUR ADMa DEVa TAIa OUR DELa STP ONL NAV STA PUR"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 59883b926bf4bdb9-AMS
+      Cf-Request-Id:
+      - 02e9038f7d0000bdb9c634a200000001
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"error":{"code":172,"message":"The transaction can
+        no longer be refunded."}}'
+    http_version: null
+  recorded_at: Sun, 24 May 2020 16:00:59 GMT
+recorded_with: VCR 5.1.0
