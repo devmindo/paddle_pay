@@ -15,7 +15,7 @@ module PaddlePay
       end
 
       def convert_class_to_path(class_name)
-        class_name.split('::').map { |v| to_snake_case(v) }.join('/')
+        class_name.split("::").map { |v| to_snake_case(v) }.join("/")
       end
 
       private
@@ -25,11 +25,11 @@ module PaddlePay
       end
 
       def to_snake_case(string)
-        string.gsub(/::/, '/')
-              .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
-              .gsub(/([a-z\d])([A-Z])/, '\1_\2')
-              .tr('-', '_')
-              .downcase
+        string.gsub(/::/, "/")
+          .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
+          .gsub(/([a-z\d])([A-Z])/, '\1_\2')
+          .tr("-", "_")
+          .downcase
       end
     end
   end

@@ -7,7 +7,7 @@ module PaddlePay
     attr_reader :vendor_id
 
     def initialize
-      @vendors_url = 'https://vendors.paddle.com/api'
+      @vendors_url = "https://vendors.paddle.com/api"
     end
 
     attr_writer :vendor_auth_code

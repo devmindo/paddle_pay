@@ -7,7 +7,7 @@ module PaddlePay
     attr_reader :message
 
     def initialize(message, code = nil)
-      super("#{message} #{'(Code ' + code.to_s + ')' if code}")
+      super("#{message} #{"(Code " + code.to_s + ")" if code}")
       @code = code
       @message = message
     end

@@ -9,23 +9,23 @@ module PaddlePay
         headers = options.delete(:headers) || {}
         body = options.delete(:body) || {}
 
-        conn = Faraday.new(url: request_url) do |faraday|
+        conn = Faraday.new(url: request_url) { |faraday|
           faraday.request :url_encoded
           faraday.response :raise_error
           faraday.adapter :net_http
-        end
+        }
 
         begin
-          response = conn.post(url, config.merge(body)) do |req|
+          response = conn.post(url, config.merge(body)) { |req|
             req.params.merge!(params)
             req.headers.merge!(headers)
-          end
+          }
           result = parse(response)
-          unless result['success']
-            raise PaddlePayError.new(result['error']['message'], result['error']['code'])
+          unless result["success"]
+            raise PaddlePayError.new(result["error"]["message"], result["error"]["code"])
           end
 
-          PaddlePay::Util.convert_hash_keys(result['response'])
+          PaddlePay::Util.convert_hash_keys(result["response"])
         rescue Faraday::BadRequestError => e
           raise BadRequestError.new(e.response[:body], e.response[:status])
         rescue Faraday::UnauthorizedError => e
@@ -40,10 +40,10 @@ module PaddlePay
           raise ConflictError.new(e.response[:body], e.response[:status])
         rescue Faraday::UnprocessableEntityError => e
           raise UnprocessableEntityError.new(e.response[:body], e.response[:status])
-        rescue Faraday::TimeoutError => e
-          raise TimeoutError, 'The connection has timed out'
-        rescue Faraday::ConnectionFailed => e
-          raise ConnectionError, 'The connection failed'
+        rescue Faraday::TimeoutError
+          raise TimeoutError, "The connection has timed out"
+        rescue Faraday::ConnectionFailed
+          raise ConnectionError, "The connection failed"
         rescue Faraday::ServerError => e
           raise ServerError.new(e.response[:body], e.response[:status])
         end
