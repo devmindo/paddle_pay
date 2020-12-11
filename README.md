@@ -1,5 +1,7 @@
 # PaddlePay
 
+![Tests](https://github.com/devmindo/paddle_pay/workflows/Tests/badge.svg?branch=master)
+
 A Ruby wrapper for the paddle.com API.
 
 ## Installation

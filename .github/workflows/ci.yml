@@ -24,4 +24,7 @@ jobs:
     - name: StandardRb check
       run: bundle exec standardrb
     - name: Run tests
+      env:
+        PADDLE_VENDOR_ID: ${{ secrets.PADDLE_VENDOR_ID }}
+        PADDLE_VENDOR_AUTH_CODE: ${{ secrets.PADDLE_VENDOR_AUTH_CODE }}
       run: bundle exec rake
