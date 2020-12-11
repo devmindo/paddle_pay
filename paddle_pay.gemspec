@@ -25,6 +25,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency "dotenv", "~> 2.7"
   s.add_development_dependency "minitest", "~> 5.8"
   s.add_development_dependency "minitest-reporters", "~> 1.1"
+  s.add_development_dependency "rake", "~> 13.0"
+  s.add_development_dependency "standardrb", "~> 1.0"
   s.add_development_dependency "vcr", "~> 5.0"
   s.add_development_dependency "webmock", "~> 3.0"
 
