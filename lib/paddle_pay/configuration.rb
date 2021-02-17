@@ -2,16 +2,29 @@
 
 module PaddlePay
   class Configuration
-    attr_reader :vendors_url
-    attr_reader :vendor_auth_code
-    attr_reader :vendor_id
+    attr_reader :environment
+    attr_accessor :vendor_auth_code
+    attr_accessor :vendor_id
 
     def initialize
-      @vendors_url = "https://vendors.paddle.com/api"
+      @environment ||= :production
     end
 
-    attr_writer :vendor_auth_code
+    def environment=(env)
+      env = env.to_sym
+      unless [:development, :sandbox, :production].include?(env)
+        raise ArgumentError, "#{env.inspect} is not a valid environment"
+      end
+      @environment = env
+    end
 
-    attr_writer :vendor_id
+    def vendors_url
+      case @environment
+      when :production
+        "https://vendors.paddle.com/api"
+      when :development, :sandbox
+        "https://sandbox-vendors.paddle.com/api"
+      end
+    end
   end
 end

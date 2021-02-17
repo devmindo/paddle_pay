@@ -1,0 +1,33 @@
+name: release
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+    - name: Install dependencies
+      run: bundle install
+    - name: Release Gem
+      env:
+        RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+      run: |
+        mkdir -p ~/.gem
+        cat << EOF > ~/.gem/credentials
+        ---
+        :rubygems_api_key: ${RUBYGEMS_API_KEY}
+        EOF
+        chmod 0600 ~/.gem/credentials
+        bundle install
+        bundle exec gem release
+        rm -f ~/.gem/credentials

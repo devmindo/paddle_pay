@@ -37,6 +37,9 @@ module PaddlePay
   class UnprocessableEntityError < ClientError
   end
 
+  class ArgumentError < ClientError
+  end
+
   class ServerError < PaddlePayError
   end
 

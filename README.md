@@ -1,6 +1,7 @@
 # PaddlePay
 
 ![Tests](https://github.com/devmindo/paddle_pay/workflows/Tests/badge.svg?branch=master)
+[![Gem Version](https://img.shields.io/gem/v/paddle_pay.svg?style=flat)](https://rubygems.org/gems/paddle_pay)
 
 A Ruby wrapper for the paddle.com API.
 
@@ -20,12 +21,24 @@ And then execute:
 
 Configure the gem with the credentials obtained from the Paddle Dashboard
 
+### Development
 ```ruby
 PaddlePay.configure do |config|
-  config.vendor_id = 'YOUR VENDOR ID'
-  config.vendor_auth_code = 'YOUR VENDOR AUTH CODE'
+  config.environment = :development # or :sandbox
+  config.vendor_id = 'YOUR SANDBOX VENDOR ID'
+  config.vendor_auth_code = 'YOUR SANDBOX VENDOR AUTH CODE'
 end
 ```
+
+### Production
+```ruby
+PaddlePay.configure do |config|
+  config.environment = :production
+  config.vendor_id = 'YOUR PRODUCTION VENDOR ID'
+  config.vendor_auth_code = 'YOUR PRODUCTION VENDOR AUTH CODE'
+end
+```
+
 ## Usage
 
 ### Product
@@ -199,6 +212,10 @@ PaddlePay::Transaction::Subscription.list(id, options = {})
 id = '123456'
 PaddlePay::Transaction::User.list(id, options = {})
 ```
+
+## Webhooks
+
+With this gem it is possible to communicate with the Paddle API, but no webhooks are handled. If you want to handle Paddle webhooks in a Ruby on Rails application, please have a look at the [pay gem](https://github.com/pay-rails/pay) where this gem is integrated.
 
 ## Development
 
