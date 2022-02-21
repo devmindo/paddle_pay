@@ -10,7 +10,7 @@ describe PaddlePay::Connection do
   describe "when a request is made" do
     it "should return a json parsed response if request is successful" do
       stub_request(:post, PaddlePay.config.vendors_url)
-        .to_return(body: '{"success":true,"response":[{"data": "abcd"}]}', status: 200)
+        .to_return(body: '{"success":true,"response":[{"data": "abcd"}]}', status: 200, headers: {content_type: "application/json"})
       response = @connection.request("")
       assert_instance_of Array, response
       assert_equal response.first[:data], "abcd"
@@ -18,7 +18,7 @@ describe PaddlePay::Connection do
 
     it "should raise a paddle pay error if request is not successful" do
       stub_request(:post, PaddlePay.config.vendors_url)
-        .to_return(body: '{"success":false,"error":{"code":100,"message":"Error"}}', status: 200)
+        .to_return(body: '{"success":false,"error":{"code":100,"message":"Error"}}', status: 200, headers: {content_type: "application/json"})
       assert_raises PaddlePay::PaddlePayError do
         @connection.request("")
       end
@@ -26,7 +26,7 @@ describe PaddlePay::Connection do
 
     it "should raise a parse error if response is not in json format" do
       stub_request(:post, PaddlePay.config.vendors_url)
-        .to_return(body: "abcd", status: 200)
+        .to_return(body: "abcd", status: 200, headers: {content_type: "application/json"})
       assert_raises PaddlePay::ParseError do
         @connection.request("")
       end

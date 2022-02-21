@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "faraday"
-require "json"
 
 require_relative "paddle_pay/configuration"
 require_relative "paddle_pay/connection"

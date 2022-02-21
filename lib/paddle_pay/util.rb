@@ -8,7 +8,7 @@ module PaddlePay
         when Array
           value.map { |v| convert_hash_keys(v) }
         when Hash
-          Hash[value.map { |k, v| [underscore_key(k), convert_hash_keys(v)] }]
+          value.map { |k, v| [underscore_key(k), convert_hash_keys(v)] }.to_h
         else
           value
         end

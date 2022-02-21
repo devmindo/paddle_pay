@@ -9,23 +9,23 @@ describe PaddlePay::Util do
     end
 
     it "should convert hash keys to snake case" do
-      assert_equal PaddlePay::Util.convert_hash_keys({"testKey": "test"}), {test_key: "test"}
+      assert_equal PaddlePay::Util.convert_hash_keys({testKey: "test"}), {test_key: "test"}
     end
 
     it "should convert multiple hash keys to snake case" do
-      assert_equal PaddlePay::Util.convert_hash_keys({"testKey": "test", "secondKey": "test"}), {test_key: "test", second_key: "test"}
+      assert_equal PaddlePay::Util.convert_hash_keys({testKey: "test", secondKey: "test"}), {test_key: "test", second_key: "test"}
     end
 
     it "should convert hash keys in arrays to snake case" do
-      assert_equal PaddlePay::Util.convert_hash_keys([{"testKey": "test"}]), [{test_key: "test"}]
+      assert_equal PaddlePay::Util.convert_hash_keys([{testKey: "test"}]), [{test_key: "test"}]
     end
 
     it "should convert abbreviations to lowercase keys" do
-      assert_equal PaddlePay::Util.convert_hash_keys({"USD": "test"}), {usd: "test"}
+      assert_equal PaddlePay::Util.convert_hash_keys({USD: "test"}), {usd: "test"}
     end
 
     it "should convert multidimensional hashes" do
-      assert_equal PaddlePay::Util.convert_hash_keys({"testKey": {"multiKey": "test"}}), {test_key: {multi_key: "test"}}
+      assert_equal PaddlePay::Util.convert_hash_keys({testKey: {multiKey: "test"}}), {test_key: {multi_key: "test"}}
     end
   end
 

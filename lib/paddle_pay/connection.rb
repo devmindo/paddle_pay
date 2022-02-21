@@ -12,6 +12,7 @@ module PaddlePay
         conn = Faraday.new(url: request_url) { |faraday|
           faraday.request :url_encoded
           faraday.response :raise_error
+          faraday.response :json
           faraday.adapter :net_http
         }
 
@@ -20,12 +21,16 @@ module PaddlePay
             req.params.merge!(params)
             req.headers.merge!(headers)
           }
-          result = parse(response)
+          result = response.body
+
           unless result["success"]
             raise PaddlePayError.new(result["error"]["message"], result["error"]["code"])
           end
 
           PaddlePay::Util.convert_hash_keys(result["response"])
+        rescue Faraday::ParsingError => e
+          raise ParseError, "Invalid response object from API: #{e.response[:body]} " \
+                    "(HTTP response code was #{e.response[:status]})"
         rescue Faraday::BadRequestError => e
           raise BadRequestError.new(e.response[:body], e.response[:status])
         rescue Faraday::UnauthorizedError => e
@@ -50,13 +55,6 @@ module PaddlePay
       end
 
       private
-
-      def parse(response)
-        JSON.parse(response.body)
-      rescue JSON::ParserError
-        raise ParseError, "Invalid response object from API: #{response.body.inspect} " \
-                    "(HTTP response code was #{response.status})"
-      end
 
       def config
         {
