@@ -1,6 +1,6 @@
 # PaddlePay
 
-![Tests](https://github.com/devmindo/paddle_pay/workflows/Tests/badge.svg?branch=main)
+![Tests](https://github.com/devmindo/paddle_pay/workflows/tests/badge.svg?branch=main)
 [![Gem Version](https://img.shields.io/gem/v/paddle_pay.svg?style=flat)](https://rubygems.org/gems/paddle_pay)
 
 A Ruby wrapper for the paddle.com API.
