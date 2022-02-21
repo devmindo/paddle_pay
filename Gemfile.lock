@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    paddle_pay (0.1.0)
+    paddle_pay (0.2.0)
       faraday (>= 1.10.0, < 3.0)
 
 GEM
@@ -77,4 +77,4 @@ DEPENDENCIES
   webmock (~> 3.0)
 
 BUNDLED WITH
-   2.2.32
+   2.3.7
