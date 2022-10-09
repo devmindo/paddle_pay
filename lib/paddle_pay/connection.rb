@@ -9,7 +9,9 @@ module PaddlePay
         headers = options.delete(:headers) || {}
         body = options.delete(:body) || {}
 
-        conn = Faraday.new(url: request_url) { |faraday|
+        conn = Faraday.new(url: request_url,
+                           proxy: proxy_url,
+                           ssl: { verify: PaddlePay.config.ssl_verify }) { |faraday|
           faraday.request :url_encoded
           faraday.response :raise_error
           faraday.response :json
@@ -61,6 +63,14 @@ module PaddlePay
           vendor_id: PaddlePay.config.vendor_id,
           vendor_auth_code: PaddlePay.config.vendor_auth_code
         }
+      end
+
+      def proxy_url
+        if PaddlePay.config.proxy_host && PaddlePay.config.proxy_port
+          return "#{PaddlePay.config.proxy_host}:#{PaddlePay.config.proxy_port}"
+        end
+
+        nil
       end
     end
   end

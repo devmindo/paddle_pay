@@ -3,6 +3,9 @@
 module PaddlePay
   class Configuration
     attr_reader :environment
+    attr_accessor :proxy_host
+    attr_accessor :proxy_port
+    attr_accessor :ssl_verify
     attr_accessor :vendor_auth_code
     attr_accessor :vendor_id
 
