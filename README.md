@@ -213,6 +213,16 @@ id = '123456'
 PaddlePay::Transaction::User.list(id, options = {})
 ```
 
+## Proxy
+
+```ruby
+PaddlePay.configure do |config|
+  config.proxy_host = 'YOUR PROXY HOST'
+  config.proxy_port = 'YOUR PROXY PORT'
+  config.ssl_verify = true
+end
+```
+
 ## Webhooks
 
 With this gem it is possible to communicate with the Paddle API, but no webhooks are handled. If you want to handle Paddle webhooks in a Ruby on Rails application, please have a look at the [pay gem](https://github.com/pay-rails/pay) where this gem is integrated.

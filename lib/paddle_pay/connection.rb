@@ -10,8 +10,8 @@ module PaddlePay
         body = options.delete(:body) || {}
 
         conn = Faraday.new(url: request_url,
-                           proxy: proxy_url,
-                           ssl: { verify: PaddlePay.config.ssl_verify }) { |faraday|
+          proxy: proxy_url,
+          ssl: {verify: PaddlePay.config.ssl_verify}) { |faraday|
           faraday.request :url_encoded
           faraday.response :raise_error
           faraday.response :json
